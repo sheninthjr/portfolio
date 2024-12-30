@@ -2,21 +2,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
-
-export interface ProjectProps {
-  id: string;
-  title: string;
-  description: string;
-  stacks: string[];
-  type: ProjectType;
-}
-
-export enum ProjectType {
-  WEB,
-  APP,
-  EXTENSION,
-  OPENSOURCE,
-}
+import { ProjectProps, ProjectType } from '@/types';
 
 const projects: ProjectProps[] = [
   {
