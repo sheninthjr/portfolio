@@ -2,12 +2,12 @@ import { Terminal } from 'lucide-react';
 
 export default function Resume() {
   return (
-    <div className="bg-blackish/80 p-6 backdrop-blur-lg h-[85%] top-6 rounded-xl max-w-6xl mx-auto fixed w-full left-0 right-0 border border-white/10 shadow-lg shadow-white/5 overflow-hidden">
+    <div className="bg-blackish/80 p-6 backdrop-blur-lg h-[90%] md:h-[85%] top-6 rounded-xl max-w-6xl mx-auto fixed w-full left-0 right-0 md:border border-white/10 md:shadow-lg shadow-white/5 overflow-hidden">
       <div className="flex flex-col space-y-4 h-full">
         <div className="font-robotoFlex font-extrabold text-4xl text-lightwhite">
           RESUME
         </div>
-        <div className="flex flex-col space-y-8 overflow-y-auto h-full">
+        <div className="flex flex-col space-y-20 overflow-y-auto h-full">
           <div className="flex flex-col space-y-4">
             <div className="font-bold text-2xl font-metrophobic text-orange">
               Education

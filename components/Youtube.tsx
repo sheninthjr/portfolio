@@ -27,12 +27,12 @@ export function Youtube() {
   ];
 
   return (
-    <div className="bg-white/5 rounded-xl w-full h-full md:px-8 py-4 overflow-y-auto">
+    <div className="rounded-xl w-full h-full md:px-8 py-4 overflow-y-auto">
       <div className="max-w-6xl mx-auto space-y-8">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-6 rounded-xl transition-all duration-300">
           <div className="relative group">
             <img
-              src="/pic.jpeg"
+              src="/mine.jpeg"
               className="w-48 h-48 rounded-full object-cover border-4 border-gray-700 transition-all duration-300 group-hover:scale-105 group-hover:border-blue-500"
               alt="Profile"
             />
@@ -91,7 +91,7 @@ export function Youtube() {
                 Share
               </button>
             </div>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
               {courses.map((course, index) => (
                 <div
                   key={index}

@@ -14,7 +14,7 @@ export function LatestProjects() {
         <h2 className="text-lightwhite text-3xl font-bold mb-3">
           LATEST PROJECTS
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-between items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 self-center md:self-auto gap-8 justify-between items-center">
           {latestProjects.map((value, index) => (
             <div
               key={index}

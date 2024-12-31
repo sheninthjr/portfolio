@@ -45,7 +45,7 @@ export default function ProjectDetails() {
   return (
     <div className="fixed inset-0 bg-blackish/95 overflow-y-auto">
       <div className="min-h-screen p-4 sm:p-6 md:p-8">
-        <div className="max-w-7xl mx-auto bg-gradient-to-br from-gray/20 via-gray/10 to-transparent rounded-2xl border border-white/10">
+        <div className="max-w-6xl mx-auto bg-gradient-to-br from-gray/20 via-gray/10 to-transparent rounded-2xl border border-white/10">
           <div className="p-4 sm:p-6 md:p-8 space-y-6 md:space-y-8">
             <nav className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <Link

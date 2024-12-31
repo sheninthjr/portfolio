@@ -91,7 +91,7 @@ export default function Projects() {
   );
 
   return (
-    <div className="bg-blackish/80 p-6 backdrop-blur-lg h-[85%] top-6 rounded-xl max-w-6xl mx-auto fixed w-full left-0 right-0 border border-white/10 shadow-lg shadow-white/5 overflow-y-auto">
+    <div className="bg-blackish/80 p-6 backdrop-blur-lg h-[88%] md:h-[85%] md:top-6 rounded-xl max-w-6xl mx-auto fixed w-full left-0 right-0 md:border border-white/10 shadow-lg shadow-white/5 overflow-y-auto">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -104,7 +104,7 @@ export default function Projects() {
           <button
             key={type}
             onClick={() => setActiveType(type)}
-            className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200
+            className={`relative px-2 md:px-4  py-2 text-sm font-medium rounded-lg transition-colors duration-200
               ${activeType === type ? 'text-white' : 'text-white/50 hover:text-white/70'}`}
           >
             {label}
