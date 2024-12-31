@@ -208,12 +208,12 @@ export default function ProjectDetails() {
                 <div className="bg-[#1E1E1E] rounded-xl overflow-hidden border border-white/10">
                   <div className="flex items-center gap-2 px-4 py-2 bg-white/5">
                     <Terminal size={16} className="text-white/60" />
-                    <span className="text-sm font-medium text-white/60">
+                    <span className="text-sm font-medium font-robotoFlex text-white/60">
                       Project Configuration
                     </span>
                   </div>
                   <pre className="p-4 overflow-x-auto text-sm">
-                    <code className="text-white/90 font-mono">
+                    <code className="text-white/90 font-metrophobic">
                       {codeSnippet}
                     </code>
                   </pre>

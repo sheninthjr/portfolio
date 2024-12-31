@@ -19,3 +19,13 @@ export enum ProjectType {
   EXTENSION,
   OPENSOURCE,
 }
+
+export interface InterviewExperienceTypes {
+  id: string;
+  name: string;
+  jobDescription: string;
+  totalInterviewRounds: string[];
+  companyType: 'Product' | 'Service';
+  ratings: number;
+  honestReview: string[];
+}
