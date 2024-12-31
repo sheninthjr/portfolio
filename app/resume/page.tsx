@@ -1,4 +1,4 @@
-import { Expand, Terminal } from 'lucide-react';
+import { Terminal } from 'lucide-react';
 
 export default function Resume() {
   return (
@@ -7,13 +7,13 @@ export default function Resume() {
         <div className="font-robotoFlex font-extrabold text-4xl text-lightwhite">
           RESUME
         </div>
-        <div className="flex flex-col space-y-4 overflow-y-auto h-full">
+        <div className="flex flex-col space-y-8 overflow-y-auto h-full">
           <div className="flex flex-col space-y-4">
             <div className="font-bold text-2xl font-metrophobic text-orange">
               Education
             </div>
-            <div className="flex justify-between">
-              <div className="font-metrophobic relative w-fit">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 space-y-8 md:space-y-0 mx-auto lg:mx-0">
+              <div className="font-metrophobic relative">
                 <div className="flex flex-col space-y-1 p-2 w-80 rounded-xl h-48 border-4 border-neutral-700">
                   <span className="text-lightwhite text-lg">
                     Velammal Institute of Technology
@@ -36,7 +36,7 @@ export default function Resume() {
                   <div className="absolute bg-gray h-4 w-24 -right-[70%]"></div>
                 </div>
               </div>
-              <div className="font-metrophobic relative w-fit">
+              <div className="font-metrophobic relative">
                 <div className="flex flex-col space-y-1 p-2 w-80 rounded-xl h-48 border-4 border-neutral-700">
                   <span className="text-lightwhite text-lg">
                     Hebron Matriculation and Higher Secondary School
@@ -59,7 +59,7 @@ export default function Resume() {
                   <div className="absolute bg-gray h-4 w-24 -right-[70%]"></div>
                 </div>
               </div>
-              <div className="font-metrophobic relative w-fit">
+              <div className="font-metrophobic relative pt-0 md:pt-10 lg:pt-0">
                 <div className="flex flex-col space-y-1 p-2 w-80 rounded-xl h-48 border-4 border-neutral-700">
                   <span className="text-lightwhite text-lg">
                     Hebron Matriculation and Higher Secondary School
@@ -82,11 +82,11 @@ export default function Resume() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col space-y-4 pt-12">
+          <div className="flex flex-col space-y-4">
             <div className="font-bold text-2xl font-metrophobic text-orange">
               Internship
             </div>
-            <div className="flex justify-between">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto lg:mx-0">
               <div className="bg-[#1E1E1E] rounded-xl overflow-hidden border w-80 border-white/10">
                 <div className="flex items-center gap-2 px-4 py-2 bg-white/5">
                   <Terminal size={16} className="text-white/60" />
@@ -144,28 +144,33 @@ export default function Resume() {
             <div className="font-bold text-2xl font-metrophobic text-orange">
               Certificates
             </div>
-            <div className="flex justify-between">
-              <div className="w-fit relative">
-                {/* <Expand className='absolute right-2 top-2 bg-gray text-white rounded-full px-1'/> */}
-                <img src="/c5.jpg" className="w-60 h-40 rounded-xl" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto lg:mx-0">
+              <div className="relative">
+                <img
+                  src="/c5.jpg"
+                  alt="certificate"
+                  className="w-80 h-40 rounded-xl object-cover"
+                />
                 <div className="py-2 absolute -bottom-0.5 rounded-b-xl bg-gray w-full font-bold font-metrophobic text-center">
                   FULLSTACK
                 </div>
               </div>
-              {/* <div className="w-fit relative">
-                <img src="/c4.png" className="w-60 h-40 rounded-xl" />
-                <div className="py-2 absolute -bottom-0.5 rounded-b-xl bg-gray w-full font-bold font-metrophobic text-center">
-                  DEVOPS
-                </div>
-              </div> */}
-              <div className="w-fit relative">
-                <img src="/c2.png" className="w-60 h-40 rounded-xl" />
+              <div className="relative">
+                <img
+                  src="/c2.png"
+                  alt="certificate"
+                  className="w-80 h-40 rounded-xl object-cover"
+                />
                 <div className="py-2 absolute -bottom-0.5 rounded-b-xl bg-gray w-full font-bold font-metrophobic text-center">
                   MONGODB
                 </div>
               </div>
-              <div className="w-fit relative">
-                <img src="/c3.png" className="w-60 h-40 rounded-xl" />
+              <div className="relative">
+                <img
+                  src="/c3.png"
+                  alt="certificate"
+                  className="w-80 h-40 rounded-xl object-cover"
+                />
                 <div className="py-2 absolute -bottom-0.5 rounded-b-xl bg-gray w-full font-bold font-metrophobic text-center">
                   BUSINESS ANALYTICS
                 </div>

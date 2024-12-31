@@ -104,7 +104,7 @@ export default function Contact() {
             <div className="space-y-8">
               <div className="relative">
                 <h2 className="text-3xl font-bold text-transparent font-robotoFlex bg-clip-text bg-lightwhite">
-                  Let's Connect
+                  Let&apos;s Connect
                 </h2>
                 <p className="mt-2 text-gray-400 font-metrophobic">
                   Open for opportunities and collaborations

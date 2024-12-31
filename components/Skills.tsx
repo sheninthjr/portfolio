@@ -62,10 +62,10 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, index }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ scale: 1.05, y: -5 }}
-      className="bg-gray p-6 rounded-xl font-metrophobic shadow-lg hover:shadow-2xl transition-all duration-300"
+      className="bg-gray px-4 py-4 md:p-6 rounded-xl font-metrophobic shadow-lg hover:shadow-2xl transition-all duration-300"
     >
       <motion.div className="space-y-3">
-        <h4 className="text-lg font-bold mb-2 text-white">{skill.name}</h4>
+        <h4 className="md:text-lg font-bold mb-2 text-white">{skill.name}</h4>
       </motion.div>
     </motion.div>
   );
@@ -80,9 +80,9 @@ const SkillsCategory: React.FC<SkillsCategoryProps> = ({
     <motion.button
       whileHover={{ x: 10 }}
       onClick={onClick}
-      className={`text-left text-xl font-bold font-robotoFlex flex items-center gap-3 transition-all duration-300 ${
+      className={`text-left text-sm md:text-xl font-bold font-robotoFlex flex items-center gap-3 transition-all duration-300 ${
         isActive
-          ? 'text-orange bg-orange/10 px-6 py-3 rounded-xl'
+          ? 'text-orange bg-orange/10 px-2 md:px-6 py-3 rounded-xl'
           : 'text-lightwhite hover:text-orange px-6 py-3'
       }`}
     >
@@ -154,7 +154,7 @@ export function Skills() {
         SKILLS
       </motion.h2>
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row gap-12">
+        <div className="flex flex-row gap-2 justify-between md:justify-normal md:gap-40 lg:gap-12">
           <motion.div
             initial={{ x: -50 }}
             animate={{ x: 0 }}

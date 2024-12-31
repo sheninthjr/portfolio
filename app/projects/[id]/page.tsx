@@ -9,8 +9,6 @@ import {
   Lock,
   PackageOpen,
   ArrowLeft,
-  Clock,
-  Tag,
   Code,
   ExternalLink,
   ChevronLeft,
@@ -45,21 +43,11 @@ export default function ProjectDetails() {
 }`;
 
   return (
-    <div className="fixed inset-0 bg-blackish/95 p-6">
-      <div className="relative h-[90%] max-w-7xl mx-auto rounded-2xl border border-white/10 overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="absolute inset-0 bg-gradient-to-br from-gray/20 via-gray/10 to-transparent"
-        />
-
-        <div className="relative p-8 overflow-y-auto h-full">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="max-w-7xl mx-auto space-y-8"
-          >
-            <nav className="flex items-center justify-between">
+    <div className="fixed inset-0 bg-blackish/95 overflow-y-auto">
+      <div className="min-h-screen p-4 sm:p-6 md:p-8">
+        <div className="max-w-7xl mx-auto bg-gradient-to-br from-gray/20 via-gray/10 to-transparent rounded-2xl border border-white/10">
+          <div className="p-4 sm:p-6 md:p-8 space-y-6 md:space-y-8">
+            <nav className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <Link
                 href="/projects"
                 className="group inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors"
@@ -72,35 +60,30 @@ export default function ProjectDetails() {
                 </motion.div>
                 <span>Back to Projects</span>
               </Link>
-
-              <motion.div
-                initial={{ x: 20 }}
-                animate={{ x: 0 }}
-                className="flex items-center font-metrophobic gap-3"
-              >
+              <div className="flex flex-wrap items-center gap-3 font-metrophobic">
                 {project.status && (
-                  <span className="flex gap-1 justify-center items-center self-center px-2 py-2 text-sm bg-blue-500/50 rounded-full font-medium backdrop-blur-sm border border-green-500/20">
-                    <Globe />
+                  <span className="flex gap-1 items-center px-3 py-1.5 text-sm bg-blue-500/50 rounded-full font-medium backdrop-blur-sm border border-green-500/20">
+                    <Globe size={16} />
                     {project.status}
                   </span>
                 )}
                 {project.openSource ? (
                   <div className="flex gap-1 p-2 bg-green-500/10 rounded-lg">
-                    <PackageOpen className="text-green-400" size={24} />
-                    <span className="">Open Source</span>
+                    <PackageOpen className="text-green-400" size={20} />
+                    <span className="text-sm">Open Source</span>
                   </div>
                 ) : (
                   <div className="p-2 bg-yellow-500/10 rounded-lg">
-                    <Lock className="text-yellow-400" size={24} />
+                    <Lock className="text-yellow-400" size={20} />
                   </div>
                 )}
-              </motion.div>
+              </div>
             </nav>
-            <header className="space-y-6">
+            <header className="space-y-4 md:space-y-6">
               <motion.h1
                 initial={{ x: -20 }}
                 animate={{ x: 0 }}
-                className="text-6xl font-bold text-white font-robotoFlex"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white font-robotoFlex"
               >
                 {project.title}
               </motion.h1>
@@ -108,13 +91,13 @@ export default function ProjectDetails() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-white/90 text-xl leading-relaxed max-w-7xl font-metrophobic"
+                className="text-white/90 text-base sm:text-lg md:text-xl leading-relaxed font-metrophobic"
               >
                 {project.description}
               </motion.p>
             </header>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="relative w-full h-[400px] bg-white/5 rounded-2xl overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+              <div className="relative w-full aspect-video md:aspect-auto md:h-[400px] bg-white/5 rounded-2xl overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={currentImageIndex}
@@ -132,29 +115,33 @@ export default function ProjectDetails() {
                   <>
                     <button
                       onClick={prevImage}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white/80 hover:text-white transition-all"
+                      className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white/80 hover:text-white transition-all"
                     >
-                      <ChevronLeft size={24} />
+                      <ChevronLeft size={20} />
                     </button>
                     <button
                       onClick={nextImage}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white/80 hover:text-white transition-all"
+                      className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white/80 hover:text-white transition-all"
                     >
-                      <ChevronRight size={24} />
+                      <ChevronRight size={20} />
                     </button>
                     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                       {project.image.map((_, index) => (
                         <button
                           key={index}
                           onClick={() => setCurrentImageIndex(index)}
-                          className={`w-2 h-2 rounded-full transition-all ${index === currentImageIndex ? 'bg-white scale-125' : 'bg-white/50'}`}
+                          className={`w-2 h-2 rounded-full transition-all ${
+                            index === currentImageIndex
+                              ? 'bg-white scale-125'
+                              : 'bg-white/50'
+                          }`}
                         />
                       ))}
                     </div>
                   </>
                 )}
               </div>
-              <div className="space-y-8 font-metrophobic">
+              <div className="space-y-6 md:space-y-8 font-metrophobic pb-14 md:pb-0">
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 text-white/70">
                     <Code size={20} />
@@ -162,7 +149,7 @@ export default function ProjectDetails() {
                       Tech Stack
                     </span>
                   </div>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2 md:gap-3">
                     {project.stacks.map((stack, index) => (
                       <motion.span
                         key={stack}
@@ -170,25 +157,25 @@ export default function ProjectDetails() {
                         animate={{ opacity: 1, scale: 1 }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ delay: index * 0.1 }}
-                        className="px-4 py-2 bg-white/5 rounded-lg text-white/80 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                        className="px-3 py-1.5 md:px-4 md:py-2 bg-white/5 rounded-lg text-sm md:text-base text-white/80 border border-white/10 hover:bg-white/10 transition-all duration-300"
                       >
                         {stack}
                       </motion.span>
                     ))}
                   </div>
                 </div>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-3 md:gap-4">
                   {project.githubLink && (
                     <motion.a
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.02 }}
-                      className="flex items-center gap-2 px-6 py-3 bg-white/5 rounded-xl text-white hover:bg-white/10 transition-all duration-300 backdrop-blur-sm border border-white/10"
+                      className="flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 bg-white/5 rounded-xl text-sm md:text-base text-white hover:bg-white/10 transition-all duration-300 backdrop-blur-sm border border-white/10"
                     >
-                      <Github size={20} />
+                      <Github size={18} />
                       View on GitHub
-                      <ExternalLink size={16} className="ml-2" />
+                      <ExternalLink size={14} className="ml-1" />
                     </motion.a>
                   )}
                   {project.LiveLink && (
@@ -197,11 +184,11 @@ export default function ProjectDetails() {
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.02 }}
-                      className="flex items-center gap-2 px-6 py-3 bg-white/5 rounded-xl text-white hover:bg-white/10 transition-all duration-300 backdrop-blur-sm border border-white/10"
+                      className="flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 bg-white/5 rounded-xl text-sm md:text-base text-white hover:bg-white/10 transition-all duration-300 backdrop-blur-sm border border-white/10"
                     >
-                      <Globe size={20} />
+                      <Globe size={18} />
                       Visit Live
-                      <ExternalLink size={16} className="ml-2" />
+                      <ExternalLink size={14} className="ml-1" />
                     </motion.a>
                   )}
                 </div>
@@ -220,7 +207,7 @@ export default function ProjectDetails() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

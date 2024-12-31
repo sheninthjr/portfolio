@@ -7,6 +7,7 @@ export function BlogPost() {
       >
         <div className="bg-white/5 border border-white/10  p-2 w-fit flex flex-col space-y-2 rounded-2xl">
           <img
+            alt="Thumbnail"
             src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*dAgiPxEEwiN-y-5ZXaqBCg.jpeg"
             className="h-40 rounded-2xl object-cover"
           />
@@ -18,6 +19,7 @@ export function BlogPost() {
             <div>
               <img
                 src="/pic.jpeg"
+                alt="profile"
                 className="w-10 h-10 rounded-full object-cover"
               />
             </div>

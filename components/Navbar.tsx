@@ -1,7 +1,7 @@
 'use client';
 import { BookOpen, Contact, Home, Lightbulb, NotebookText } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { MouseEvent, useState } from 'react';
 
 function GiftPaper({
   color,
@@ -10,8 +10,8 @@ function GiftPaper({
   direction,
 }: {
   color: string;
-  startX: string;
-  startY: string;
+  startX: number;
+  startY: number;
   direction: string;
 }) {
   return (
@@ -29,8 +29,8 @@ function GiftPaper({
 interface GiftPaperType {
   id: string;
   color: string;
-  startX: string;
-  startY: string;
+  startX: number;
+  startY: number;
   direction: string;
 }
 
@@ -76,7 +76,7 @@ export function Navbar() {
   ];
 
   const createGiftPapers = (
-    event: any,
+    event: MouseEvent<HTMLDivElement>,
     particleColor: string,
     route: string,
   ) => {
@@ -96,7 +96,6 @@ export function Navbar() {
         color: particleColor,
       })),
     );
-
     setGiftPapers((prev) => [...prev, ...newPapers]);
     setTimeout(() => {
       setGiftPapers((prev) =>

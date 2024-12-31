@@ -19,7 +19,7 @@ export function InterviewExperience() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 space-y-8">
+    <div className="max-w-4xl mx-auto md:p-6 space-y-8">
       <div className="grid gap-6">
         {interviewDetails.map((interview) => (
           <motion.div
@@ -30,10 +30,22 @@ export function InterviewExperience() {
           >
             <div className="p-6 space-y-4">
               <div className="flex items-start justify-between">
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-bold text-white font-robotoFlex">
-                    {interview.name}
-                  </h3>
+                <div className="space-y-2 w-full">
+                  <div className="flex justify-between">
+                    <h3 className="text-2xl font-bold text-white font-robotoFlex">
+                      {interview.name}
+                    </h3>
+                    <div className="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full">
+                      <Star
+                        className="text-yellow-400"
+                        size={18}
+                        fill="currentColor"
+                      />
+                      <span className="text-white font-medium">
+                        {interview.ratings.toFixed(1)}
+                      </span>
+                    </div>
+                  </div>
                   <div className="flex items-center gap-4 text-white/60 font-metrophobic">
                     <div className="flex items-center gap-2">
                       <Briefcase size={18} />
@@ -44,16 +56,6 @@ export function InterviewExperience() {
                       <span>{interview.companyType}</span>
                     </div>
                   </div>
-                </div>
-                <div className="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full">
-                  <Star
-                    className="text-yellow-400"
-                    size={18}
-                    fill="currentColor"
-                  />
-                  <span className="text-white font-medium">
-                    {interview.ratings.toFixed(1)}
-                  </span>
                 </div>
               </div>
               <motion.button

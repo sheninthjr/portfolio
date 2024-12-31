@@ -16,10 +16,10 @@ export default function Hobbies() {
           <div
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`cursor-pointer px-4 py-2 mx-2 ${
+            className={`cursor-pointer px-2 md:px-4 md:py-2 mx-2 ${
               activeTab === tab
-                ? 'border-b-8 text-xl border-gray text-white font-bold shadow-md'
-                : 'bg-transparent text-lightwhite hover:text-white'
+                ? 'border-b-4 md:border-b-8 text-xs md:text-xl border-gray text-white font-bold shadow-md'
+                : 'bg-transparent text-xs md:text-lg text-lightwhite hover:text-white'
             }`}
           >
             {tab}

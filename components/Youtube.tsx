@@ -3,7 +3,6 @@ import {
   Users,
   Video,
   Share2,
-  MessageSquare,
   BookOpen,
   Code,
   Database,
@@ -28,7 +27,7 @@ export function Youtube() {
   ];
 
   return (
-    <div className="bg-white/5 rounded-xl w-full h-full px-8 py-4 overflow-y-auto">
+    <div className="bg-white/5 rounded-xl w-full h-full md:px-8 py-4 overflow-y-auto">
       <div className="max-w-6xl mx-auto space-y-8">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-6 rounded-xl transition-all duration-300">
           <div className="relative group">
@@ -74,9 +73,9 @@ export function Youtube() {
             </div>
 
             <p className="text-gray-300 leading-relaxed font-metrophobic">
-              I'm here to teach you all you need to know about coding. Thus,
-              please remember to subscribe to my channel and stay informed.
-              Share your thoughts in the comments section.
+              I&apos;m here to teach you all you need to know about coding.
+              Thus, please remember to subscribe to my channel and stay
+              informed. Share your thoughts in the comments section.
             </p>
 
             <div className="flex flex-wrap gap-4 font-metrophobic">
