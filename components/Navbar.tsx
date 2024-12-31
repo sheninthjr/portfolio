@@ -108,7 +108,7 @@ export function Navbar() {
   return (
     <>
       <div className="fixed left-0 right-0 bottom-2 z-[999]">
-        <nav className="border border-neutral-900 p-2 flex bg-gray justify-between max-w-3xl mx-auto rounded-xl items-center h-16 bg-black/80">
+        <nav className="border border-neutral-900 p-2 flex bg-gray justify-evenly md:justify-between max-w-3xl mx-auto rounded-xl items-center h-16 bg-black/80">
           {navItems.map(
             ({ icon: Icon, label, color, particleColor, route }) => (
               <div
@@ -117,11 +117,11 @@ export function Navbar() {
                 onClick={(e) => createGiftPapers(e, particleColor, route)}
               >
                 <Icon
-                  className={`p-2 rounded-full w-10 h-10 absolute z-10 ${color}`}
+                  className={`p-2 rounded-full w-10 h-10 md:absolute z-10 ${color}`}
                 />
                 <div className="relative">
                   <p
-                    className="bg-blackish pl-4 pr-2 ml-7 py-1 rounded-lg whitespace-nowrap
+                    className="bg-blackish hidden md:block font-robotoFlex pl-4 pr-2 ml-7 py-1 rounded-lg whitespace-nowrap
                   transition-all duration-500 ease-in-out self-center
                   origin-[-10px_50%] group-hover:-rotate-[90deg]"
                   >

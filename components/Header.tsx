@@ -19,9 +19,8 @@ export function Header() {
       </div>
       <div className="flex space-y-4 justify-between w-full items-center">
         <div className="flex flex-col space-y-4">
-          <h1 className="font-robotoFlex text-5xl font-bold">
-            Hey, I'm{' '}
-            <span className="text-lightwhite text-5xl">Sheninth Jr</span>
+          <h1 className="font-robotoFlex text-5xl text-lightwhite font-bold">
+            Hey, I'm <span className="text-white text-5xl">Sheninth Jr</span>
           </h1>
           <div className="flex gap-2 font-metrophobic">
             <div className="flex gap-1 border justify-center items-center self-center border-neutral-700 text-lightwhite font-bold px-2 rounded-xl">
@@ -36,15 +35,14 @@ export function Header() {
             </a>
           </div>
           <motion.div
-            className="font-metrophobic text-2xl font-semibold"
+            className="font-metrophobic text-lightwhite text-2xl font-semibold"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
             <p>
               I Love building{' '}
-              <span className="text-lightwhite px-1 rounded-xl">SAAS</span>{' '}
-              products
+              <span className="text-white px-1 rounded-xl">SAAS</span> products
             </p>
           </motion.div>
         </div>
