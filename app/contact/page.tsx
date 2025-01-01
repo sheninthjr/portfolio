@@ -98,7 +98,7 @@ export default function Contact() {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900">
-      <div className="relative container mx-auto md:px-4 py-8 md:py-24">
+      <div className="relative container mx-auto md:px-4 pt-8 pb-12 md:py-24">
         <div className="max-w-6xl mx-auto bg-gray-900/80 backdrop-blur-xl rounded-2xl md:border border-gray shadow-2xl">
           <div className="grid lg:grid-cols-2 gap-8 p-8">
             <div className="space-y-8">

@@ -7,7 +7,7 @@ export default function Resume() {
         <div className="font-robotoFlex font-extrabold text-4xl text-lightwhite">
           RESUME
         </div>
-        <div className="flex flex-col space-y-20 overflow-y-auto h-full">
+        <div className="flex flex-col md:space-y-14 ld:space-y-20 overflow-y-auto h-full">
           <div className="flex flex-col space-y-4">
             <div className="font-bold text-2xl font-metrophobic text-orange">
               Education
@@ -82,7 +82,7 @@ export default function Resume() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 pt-16 md:pt-0">
             <div className="font-bold text-2xl font-metrophobic text-orange">
               Internship
             </div>
@@ -140,12 +140,12 @@ export default function Resume() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 pt-10 md:pt-0">
             <div className="font-bold text-2xl font-metrophobic text-orange">
               Certificates
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto lg:mx-0">
-              <div className="relative">
+              <div className="relative w-fit">
                 <img
                   src="/c5.jpg"
                   alt="certificate"
@@ -155,7 +155,7 @@ export default function Resume() {
                   FULLSTACK
                 </div>
               </div>
-              <div className="relative">
+              <div className="relative w-fit">
                 <img
                   src="/c2.png"
                   alt="certificate"
@@ -165,7 +165,7 @@ export default function Resume() {
                   MONGODB
                 </div>
               </div>
-              <div className="relative">
+              <div className="relative w-fit">
                 <img
                   src="/c3.png"
                   alt="certificate"
