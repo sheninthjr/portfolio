@@ -216,10 +216,10 @@ export default function Contact() {
                     required
                   />
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex flex-col md:flex-row gap-2 md:gap-2 justify-between items-center">
                   <button
                     type="submit"
-                    className="w-fit group relative inline-flex items-center justify-center px-4 font-robotoFlex py-3 
+                    className="w-fit group relative inline-flex items-center justify-center px-2 md:px-4 font-robotoFlex py-3 
                            overflow-hidden font-medium rounded-lg bg-gray
                            text-white transition duration-300 ease-out border-2 border-transparent
                            "
