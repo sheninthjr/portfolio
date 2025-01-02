@@ -19,7 +19,7 @@ export function InterviewExperience() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto md:p-6 space-y-8">
+    <div className="max-w-4xl mx-auto pb-4 md:p-6 space-y-8">
       <div className="grid gap-6">
         {interviewDetails.map((interview) => (
           <motion.div

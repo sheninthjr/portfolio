@@ -6,7 +6,7 @@ import { Skills } from '@/components/Skills';
 
 export default function App() {
   return (
-    <div className="bg-blackish px-6 md:p-6 backdrop-blur-lg h-[90%] md:h-[85%] md:top-6 rounded-xl max-w-6xl mx-auto fixed w-full left-0 right-0 overflow-y-hidden overflow-x-hidden">
+    <div className="bg-blackish px-6 md:p-6 backdrop-blur-lg h-[90%] md:top-6 rounded-xl max-w-6xl mx-auto fixed w-full left-0 right-0 overflow-y-hidden overflow-x-hidden">
       <div className="text-white space-y-6 h-full flex flex-col">
         <div className="hidden md:block">
           <Header />

@@ -13,6 +13,8 @@ import {
   Send,
 } from 'lucide-react';
 import type { SocialLink, ContactInformation, FeedbackForm } from '@/types';
+import axios from 'axios';
+import Link from 'next/link';
 
 const SocialIcon: React.FC<SocialLink> = ({
   icon: Icon,
@@ -93,12 +95,22 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    try {
+      const res = await axios.post('/api/feedback', {
+        name: formData.name,
+        feedback: formData.feedback,
+      });
+      if (res.status === 201) {
+      }
+    } catch (error) {
+      console.error(error);
+    }
     setFormData({ name: '', feedback: '' });
   };
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900">
-      <div className="relative container mx-auto md:px-4 pt-8 pb-12 md:py-24">
+      <div className="relative container mx-auto md:px-4 pt-8 pb-12 lg:py-28">
         <div className="max-w-6xl mx-auto bg-gray-900/80 backdrop-blur-xl rounded-2xl md:border border-gray shadow-2xl">
           <div className="grid lg:grid-cols-2 gap-8 p-8">
             <div className="space-y-8">
@@ -204,7 +216,7 @@ export default function Contact() {
                     required
                   />
                 </div>
-                <div className="flex justify-center">
+                <div className="flex justify-between items-center">
                   <button
                     type="submit"
                     className="w-fit group relative inline-flex items-center justify-center px-4 font-robotoFlex py-3 
@@ -220,6 +232,12 @@ export default function Contact() {
                     </span>
                     <span className="relative invisible">Submit Feedback</span>
                   </button>
+                  <Link
+                    href={'/feedback'}
+                    className="font-metrophobic h-fit text-cyan-500 hover:text-cyan-300"
+                  >
+                    View Feedback
+                  </Link>
                 </div>
               </form>
             </div>

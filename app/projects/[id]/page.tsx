@@ -62,7 +62,9 @@ export default function ProjectDetails() {
               </Link>
               <div className="flex flex-wrap items-center gap-3 font-metrophobic">
                 {project.status && (
-                  <span className="flex gap-1 items-center px-3 py-1.5 text-sm bg-blue-500/50 rounded-full font-medium backdrop-blur-sm border border-green-500/20">
+                  <span
+                    className={`flex gap-1 items-center px-3 py-1.5 text-sm ${project.status === 'Not Deployed' ? 'bg-red-500' : 'bg-blue-500/50'} rounded-full font-medium backdrop-blur-sm border border-green-500/20`}
+                  >
                     <Globe size={16} />
                     {project.status}
                   </span>
@@ -96,8 +98,8 @@ export default function ProjectDetails() {
                 {project.description}
               </motion.p>
             </header>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-              <div className="relative w-full aspect-video md:aspect-auto md:h-[400px] bg-white/5 rounded-2xl overflow-hidden">
+            <div className="grid grid-cols-1 gap-6 md:gap-8">
+              <div className="relative w-full aspect-video md:aspect-auto rounded-2xl overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={currentImageIndex}
@@ -107,7 +109,7 @@ export default function ProjectDetails() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -100 }}
                     transition={{ duration: 0.3 }}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </AnimatePresence>
 

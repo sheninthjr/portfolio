@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Sheninth Jr Portfolio',
+  title: 'Sheninth Jr',
   description: 'Developed by Sheninth Jr',
 };
 

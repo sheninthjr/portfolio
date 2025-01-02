@@ -47,7 +47,14 @@ const projects: ProjectDetails[] = [
     image: ['/linktopost.png'],
     description:
       'A real-time multiplayer gaming platform that leverages WebSockets and Redis for seamless interactions. GameHub supports matchmaking, real-time updates, and persistent game states to ensure an engaging and scalable gaming experience.',
-    stacks: ['Next.js', 'WebSockets', 'Redis', 'Node.js'],
+    stacks: [
+      'Next.js',
+      'WebSockets',
+      'Redis',
+      'Node.js',
+      'Docker',
+      'Typescript',
+    ],
     type: ProjectType.WEB,
     githubLink: 'https://github.com/sheninthjr/gamehub',
     LiveLink: '',
@@ -73,7 +80,7 @@ const projects: ProjectDetails[] = [
     image: ['/linktopost.png'],
     description:
       'Automates the creation of question papers using Node.js, significantly reducing manual effort. The Question Generator produces diverse and relevant questions based on predefined criteria, streamlining the assessment preparation process.',
-    stacks: ['Node.js', 'Prisma', 'PostgreSQL', 'React', 'TypeScript'],
+    stacks: ['React', 'Node.js', 'PostgreSQL', 'TypeScript', 'Prisma'],
     type: ProjectType.WEB,
     githubLink: 'https://github.com/sheninthjr/Automatic-Question-Generator',
     LiveLink: '',
@@ -98,7 +105,7 @@ const projects: ProjectDetails[] = [
     title: 'CodeJR',
     description:
       'A JavaScript-based platform for practicing Data Structures and Algorithms (DSA) with Server-Side Rendering (SSR) and real-time code validation. CodeJR provides an interactive environment for users to enhance their coding skills with immediate feedback.',
-    stacks: ['Next.js', 'SSR', 'Vercel', 'JavaScript'],
+    stacks: ['Next.js', 'Typescript', 'Vercel', 'Monaco editor'],
     type: ProjectType.WEB,
     image: ['/linktopost.png'],
     githubLink: 'https://github.com/sheninthjr/CodeJr',
@@ -167,7 +174,7 @@ export default function Projects() {
   );
 
   return (
-    <div className="bg-blackish/80 p-6 backdrop-blur-lg h-[90%] md:h-[85%] md:top-6 rounded-xl max-w-6xl mx-auto fixed w-full left-0 right-0 md:border border-white/10 shadow-lg shadow-white/5 overflow-y-auto">
+    <div className="bg-blackish/80 p-6 backdrop-blur-lg h-[90%] md:h-[85%] md:top-6 rounded-xl max-w-6xl mx-auto fixed w-full left-0 right-0 md:border border-white/10 md:shadow-lg shadow-white/5 overflow-y-auto">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

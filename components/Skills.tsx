@@ -28,7 +28,6 @@ const skillsData: SkillsData = {
     { name: 'React Native' },
     { name: 'Tailwindcss' },
     { name: 'Motion' },
-    { name: 'Three.js' },
   ],
   Backend: [
     { name: 'Node.js' },
@@ -44,6 +43,7 @@ const skillsData: SkillsData = {
     { name: 'MongoDB' },
     { name: 'PostgreSQL' },
     { name: 'Prisma' },
+    { name: 'MySQL' },
     { name: 'Redis' },
   ],
   DevOps: [
