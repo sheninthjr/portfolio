@@ -15,6 +15,7 @@ import {
 import type { SocialLink, ContactInformation, FeedbackForm } from '@/types';
 import axios from 'axios';
 import Link from 'next/link';
+import { toast } from 'react-toastify';
 
 const SocialIcon: React.FC<SocialLink> = ({
   icon: Icon,
@@ -101,8 +102,23 @@ export default function Contact() {
         feedback: formData.feedback,
       });
       if (res.status === 201) {
+        toast.dark(`Thank you, ${formData.name}! 🎉`, {
+          position: 'bottom-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'dark',
+        });
       }
     } catch (error) {
+      toast.error('Something went wrong. Please try again.', {
+        position: 'bottom-right',
+        autoClose: 3000,
+        theme: 'dark',
+      });
       console.error(error);
     }
     setFormData({ name: '', feedback: '' });
