@@ -29,7 +29,7 @@ const Feedback = () => {
 
   return (
     <div className="h-screen flex flex-col">
-      <div className="w-full max-w-2xl mx-auto px-4 py-6 flex gap-14 lg:gap-20 items-center">
+      <div className="w-full max-w-4xl mx-auto px-4 py-6 flex gap-14 md:gap-40 items-center">
         <Link
           href="/contact"
           className="group inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors"
@@ -45,6 +45,7 @@ const Feedback = () => {
         <h2 className="text-2xl font-bold font-robotoFlex text-white/90 text-center">
           User Feedback
         </h2>
+        <div></div>
       </div>
       <div className="flex-grow overflow-hidden max-w-2xl mx-auto w-full px-4 pb-6">
         <div className="h-[92%] overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
