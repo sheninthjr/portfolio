@@ -156,16 +156,16 @@ export default function Resume() {
             </ScrollRevealSection>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto lg:mx-0">
               {[
-                { src: '/c5.jpg', title: 'FULLSTACK' },
+                { src: '/cms/c1.png', title: 'FULLSTACK' },
+                { src: '/cms/c4.png', title: 'DevOps' },
                 { src: '/c2.png', title: 'MONGODB' },
-                { src: '/c3.png', title: 'BUSINESS ANALYTICS' },
               ].map((cert, index) => (
                 <ScrollRevealSection key={index} delay={0.2 * index}>
                   <div className="relative w-fit">
                     <img
                       src={cert.src}
                       alt="certificate"
-                      className="w-80 h-40 rounded-xl object-cover"
+                      className="h-52 rounded-xl object-contain"
                     />
                     <div className="py-2 absolute -bottom-0.5 rounded-b-xl bg-gray w-full font-bold font-metrophobic text-center">
                       {cert.title}

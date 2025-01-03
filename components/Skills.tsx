@@ -62,7 +62,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, index }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ scale: 1.05, y: -5 }}
-      className="bg-gray px-4 py-4 md:p-6 rounded-xl font-metrophobic shadow-lg hover:shadow-2xl transition-all duration-300"
+      className="bg-gray px-4 py-4 md:p-6 rounded-xl hover:bg-neutral-800 font-metrophobic shadow-lg hover:shadow-2xl transition-all duration-300"
     >
       <motion.div className="space-y-3">
         <h4 className="md:text-lg font-bold mb-2 text-white">{skill.name}</h4>

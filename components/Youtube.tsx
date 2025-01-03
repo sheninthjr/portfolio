@@ -53,7 +53,7 @@ export function Youtube() {
               <div className="bg-white/10 p-4 rounded-xl transition-all duration-300 cursor-pointer">
                 <Users className="w-6 h-6 text-blue-400 mb-2" />
                 <div className="text-sm text-gray-400">Subscribers</div>
-                <div className="text-2xl font-bold text-white">761</div>
+                <div className="text-2xl font-bold text-white">765</div>
               </div>
               <div className="bg-white/10 p-4 rounded-xl transition-all duration-300 cursor-pointer">
                 <Video className="w-6 h-6 text-purple-400 mb-2" />

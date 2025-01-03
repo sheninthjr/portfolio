@@ -1,8 +1,16 @@
+'use client';
 import { latestProjects } from '@/data';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useRouter } from 'next/navigation';
 
 export function LatestProjects() {
+  const router = useRouter();
+
+  const handlerRouting = (id: string) => {
+    router.push(`/projects/${id}`);
+  };
+
   return (
     <>
       <motion.div
@@ -18,7 +26,7 @@ export function LatestProjects() {
           {latestProjects.map((value, index) => (
             <div
               key={index}
-              className="bg-gray w-80 rounded-xl p-2 flex flex-col space-y-2 shadow-lg shadow-neutral-600"
+              className="bg-gray w-80 rounded-xl p-2.5 flex flex-col space-y-2 shadow-lg shadow-neutral-600"
             >
               <div className="font-robotoFlex text-xl font-bold">
                 {value.title}
@@ -32,12 +40,12 @@ export function LatestProjects() {
                     </div>
                   ))}
                 </div>
-                <a
-                  href={value.link}
+                <button
+                  onClick={() => handlerRouting(value.id)}
                   className="flex gap-1 mr-2 absolute bottom-1 right-1 font-metrophobic justify-end items-center"
                 >
                   <ArrowRight className="w-6 h-6 self-center text-orange rounded-full" />
-                </a>
+                </button>
               </div>
             </div>
           ))}
@@ -49,8 +57,8 @@ export function LatestProjects() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.2 }}
       >
-        <p className="text-gray-400 text-sm">
-          © 2024 Sheninth Jr. All rights reserved.
+        <p className="text-gray-400 text-md font-metrophobic">
+          © 2025 Sheninth Jr. All rights reserved.
         </p>
       </motion.div>
     </>

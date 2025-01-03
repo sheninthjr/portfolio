@@ -2,6 +2,7 @@ import { LatestProjectsTypes } from '@/types';
 
 export const latestProjects: LatestProjectsTypes[] = [
   {
+    id: '1',
     title: 'LinkToPost',
     description:
       'Developed a tool to transform social media links into attractive shareable images, enabling cross-platform sharing.',
@@ -9,6 +10,7 @@ export const latestProjects: LatestProjectsTypes[] = [
     link: 'https://github.com/linktopost',
   },
   {
+    id: '3',
     title: 'GameHub',
     description:
       'Created a multiplayer game platform using WebSockets, Redis Pub/Sub, and real-time backend communication.',
@@ -16,6 +18,7 @@ export const latestProjects: LatestProjectsTypes[] = [
     link: 'https://github.com/gamehub',
   },
   {
+    id: '6',
     title: 'CrowdFunding',
     description:
       'Developed a decentralized fundraising platform using Solidity and React.js for secure and transparent fundraising.',

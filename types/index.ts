@@ -1,4 +1,5 @@
 export interface LatestProjectsTypes {
+  id: string;
   title: string;
   description: string;
   stacks: string[];
