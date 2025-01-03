@@ -1,6 +1,5 @@
 'use client';
 import { latestProjects } from '@/data';
-import { ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useRouter } from 'next/navigation';
 
@@ -24,14 +23,17 @@ export function LatestProjects() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 self-center md:self-auto gap-8 justify-between items-center">
           {latestProjects.map((value, index) => (
-            <div
+            <button
+              onClick={() => handlerRouting(value.id)}
               key={index}
               className="bg-gray w-80 rounded-xl p-2.5 flex flex-col space-y-2 shadow-lg shadow-neutral-600"
             >
               <div className="font-robotoFlex text-xl font-bold">
                 {value.title}
               </div>
-              <div className="font-metrophobic">{value.description}</div>
+              <div className="font-metrophobic text-start">
+                {value.description}
+              </div>
               <div className="relative">
                 <div className="flex flex-col gap-2 font-metrophobic">
                   {value.stacks.map((s, i) => (
@@ -40,14 +42,8 @@ export function LatestProjects() {
                     </div>
                   ))}
                 </div>
-                <button
-                  onClick={() => handlerRouting(value.id)}
-                  className="flex gap-1 mr-2 absolute bottom-1 right-1 font-metrophobic justify-end items-center"
-                >
-                  <ArrowRight className="w-6 h-6 self-center text-orange rounded-full" />
-                </button>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </motion.div>

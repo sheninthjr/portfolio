@@ -1,5 +1,4 @@
 import { Code, Youtube } from 'lucide-react';
-import { FloatingIcons } from './FloatingIcons';
 import { motion } from 'motion/react';
 
 export function Header() {
@@ -51,7 +50,7 @@ export function Header() {
             </div>
           </div>
         </div>
-        <FloatingIcons />
+        {/* <FloatingIcons /> */}
       </div>
     </motion.div>
   );
@@ -106,7 +105,7 @@ export function MobileHeader() {
             </div>
           </div>
         </div>
-        <FloatingIcons />
+        {/* <FloatingIcons /> */}
       </div>
     </motion.div>
   );
